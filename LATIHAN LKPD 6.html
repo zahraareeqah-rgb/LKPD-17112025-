@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+  
+  <h1>LKPD 6</h1>
+  <h2>Latihan DOM JavaScript</h2>
+
+<p id="teks">Ini adalah paragraf yang bisa berubah warna.</p>
+<button onclick="ubahWarna()">Ubah Warna Paragraf</button>
+
+<hr>
+
+<h3>Div kosong elemen baru</h3>
+<div id="container"></div>
+<button onclick="tambahItem()">Tambah Item Baru</button>
+
+<script>
+function ubahWarna() {
+    document.getElementById("teks").style.color = "navy";
+}
+
+function tambahItem() {
+    let elemenBaru = document.createElement("p"); 
+    elemenBaru.innerHTML = "Elemen baru berhasil ditambahkan! :)";
+    document.getElementById("container").appendChild(elemenBaru);
+}
+</script>
+
+</body>
+</html>
