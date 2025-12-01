@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h1>LKPD 7</h1>
+  <h2>Latihan Event Handling</h2>
+
+<!-- LATIHAN 1 -->
+<p id="paragraf">Paragraf ini akan tersembunyi saat tombol dibawah diklik.</p>
+<button onclick="sembunyikan()">Sembunyikan Paragraf</button>
+
+<hr>
+
+<!-- LATIHAN 2 -->
+<h3>Ketik sesuatu di input:</h3>
+<input type="text" oninput="tampil(this.value)">
+<p>Hasil: <span id="output"></span></p>
+
+<script>
+function sembunyikan() {
+    document.getElementById("paragraf").style.display = "none";
+}
+
+function tampil(teks) {
+    document.getElementById("output").innerHTML = teks;
+}
+</script>
+
+</body>
+</html>
