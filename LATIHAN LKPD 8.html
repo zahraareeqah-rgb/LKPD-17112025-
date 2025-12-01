@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Pendaftaran</title>
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+            margin-top: 35px;
+        }
+        input{
+            width: 250px;
+            padding: 12px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>FORM PENDAFTARAN</h2>
+
+    <input type="text" id="nama" placeholder="Nama Lengkap"><br>
+    <input type="email" id="email" placeholder="Email"><br>
+    <input type="password" id="password" placeholder="Password (minimal 8 karakter)"><br>
+
+    <button onclick="daftar()">DAFTAR</button>
+
+    <p id="hasil"></p>
+
+    <script>
+        function daftar() {
+            let nama = document.getElementById("nama").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let hasil = document.getElementById("hasil");
+
+            // Validasi password minimal 8 karakter
+            if(password.length < 8){
+                hasil.style.color = "red";
+                hasil.innerHTML = "⚠️ Password harus minimal 8 karakter!";
+                return;
+            }
+
+            // Jika lolos, tampilkan pesan sukses
+            hasil.style.color = "green";
+            hasil.innerHTML = `✅ Pendaftaran berhasil!<br>Nama: ${nama}<br>Email: ${email}`;
+        }
+    </script>
+
+</body>
+</html>
