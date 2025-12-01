@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <h1>LKPD 5</h1>
+</head>
+<body>
+<script>
+let teman = ["Lala", "Lili", "Lulu", "Lani", "Lilu"];
+let nilai = [80, 90, 75, 85, 95];
+
+// Tampilkan nama teman
+document.write("<h2>Daftar nama: </h2>");
+for (let i = 0; i < teman.length; i++) {
+    document.write(teman[i] + "<br>");
+}
+
+// Hitung rata-rata
+let total = 0;
+for (let i = 0; i < nilai.length; i++) {
+    total += nilai[i];
+}
+let rataRata = total / nilai.length;
+
+document.write("<br><b>Nilai siswa:</b> " + nilai.join(", ") + "<br>");
+document.write("<b>Rata-rata nilai siswa adalah:</b> " + rataRata);
+</script>
+</body>
+</html>
